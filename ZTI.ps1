@@ -1,6 +1,6 @@
 # Settings
 $OSName = 'Windows 11 24H2 x64'
-$OSEdition = 'Professional'
+$OSEdition = 'Pro'
 $OSActivation = 'Retail'
 $OSLanguage = 'de-de'
 $GroupTag = "4IoTAutoPilotDeployment"
