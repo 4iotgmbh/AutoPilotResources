@@ -3,8 +3,9 @@ $OSName = 'Windows 11 24H2 x64'
 $OSEdition = 'Pro'
 $OSActivation = 'Retail'
 $OSLanguage = 'de-de'
-$GroupTag = "4IoTAutoPilotDeployment"
-$TimeServerUrl = "time.cloudflare.com"
+$GroupTag = '4IoTAutoPilotDeployment'
+$TimeZone = 'W. Europe Standard Time'
+$TimeServerUrl = "https://www.timeapi.io/api/time/current/zone?timeZone=Europe%2FBerlin"
 $OutputFile = "X:\AutopilotHash.csv"
 $TenantID = [Environment]::GetEnvironmentVariable('OSDCloudAPTenantID','Machine') # $env:OSDCloudAPTenantID doesn't work within WinPe
 $AppID = [Environment]::GetEnvironmentVariable('OSDCloudAPAppID','Machine')
@@ -30,7 +31,8 @@ $Global:MyOSDCloud = [ordered]@{
 Write-Host "Autopilot Device Registration Version 1.0"
 
 # Set the time
-$DateTime = (Invoke-WebRequest -Uri $TimeServerUrl -UseBasicParsing).Headers.Date
+Set-TimeZone -Id $TimeZone
+$DateTime = $(invoke-restmethod -UseBasicParsing -Uri $TimeServerUrl).datetime
 Set-Date -Date $DateTime
 
 # Download required files

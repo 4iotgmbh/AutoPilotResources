@@ -10,11 +10,12 @@ Snippets to get zero touch Autopilot going
 
 ## Setup Tasks
 
-Setup OSDCloud environment, replace the following variables
-
-- {Entra-TenantID}
-- {Entra-AppID}
-- {Entra-AppSecret}
+- Setup OSDCloud environment
+- replace the following replacement strings:
+  - {Entra-TenantID}
+  - {Entra-AppID}
+  - {Entra-AppSecret}
+- check / replace time server and timezone variables
 
 ```Powershell
 $StartPSCommand = @'
