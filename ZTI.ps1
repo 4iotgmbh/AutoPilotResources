@@ -3,7 +3,7 @@ $OSName = 'Windows 11 24H2 x64'
 $OSEdition = 'Pro'
 $OSActivation = 'Retail'
 $OSLanguage = 'de-de'
-$GroupTag = '4IoTAutoPilotDeployment'
+$GroupTag = 'AutopilotUserDeployment'
 $TimeZone = 'W. Europe Standard Time'
 $TimeServerUrl = "https://www.timeapi.io/api/time/current/zone?timeZone=Europe%2FBerlin"
 $OutputFile = "X:\AutopilotHash.csv"
@@ -14,7 +14,7 @@ $AppSecret = [Environment]::GetEnvironmentVariable('OSDCloudAPAppSecret','Machin
 #Set Global OSDCloud Vars
 $Global:MyOSDCloud = [ordered]@{
     BrandColor = "#0096FF"
-    Restart = [bool]$false
+    Restart = [bool]$true
     RecoveryPartition = [bool]$True
     OEMActivation = [bool]$True
     WindowsUpdate = [bool]$True

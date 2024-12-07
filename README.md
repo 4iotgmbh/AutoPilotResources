@@ -19,7 +19,7 @@ Snippets to get zero touch Autopilot going
 
 ```Powershell
 $StartPSCommand = @'
-    start /wait PowerShell -NoL -C "[Environment]::SetEnvironmentVariable('OSDCloudAPTenantID','{Entra-TenantID}','Machine'); [Environment]::SetEnvironmentVariable('OSDCloudAPAppID','{Entra-AppID}','Machine'); [Environment]::SetEnvironmentVariable('OSDCloudAPAppSecret','{Entra-AppSecret}','Machine')"
+    [Environment]::SetEnvironmentVariable('OSDCloudAPTenantID','{Entra-TenantID}','Machine'); [Environment]::SetEnvironmentVariable('OSDCloudAPAppID','{Entra-AppID}','Machine'); [Environment]::SetEnvironmentVariable('OSDCloudAPAppSecret','{Entra-AppSecret}','Machine')
 '@
 $Params = @{
  CloudDriver = 'Dell','USB'
