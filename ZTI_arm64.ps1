@@ -1,5 +1,5 @@
 # Settings
-$OSName = 'Windows 11 25H2 x64'
+$OSName = 'Windows 11 25H2 ARM64'
 $OSEdition = 'Pro'
 $OSActivation = 'Retail'
 $OSLanguage = 'de-de'
