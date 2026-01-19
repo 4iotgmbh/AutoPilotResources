@@ -5,7 +5,7 @@ $OSActivation = 'Retail'
 $OSLanguage = 'de-de'
 $GroupTag = 'AutopilotKioskDeployment'
 $TimeZone = 'W. Europe Standard Time'
-$TimeServerUrl = "https://www.timeapi.io/api/time/current/zone?timeZone=Europe%2FBerlin"
+$TimeServerUrl = "https://time.now/developer/api/timezone/Europe/Berlin"
 $OutputFile = "X:\AutopilotHash.csv"
 $TenantID = [Environment]::GetEnvironmentVariable('OSDCloudAPTenantID','Machine') # $env:OSDCloudAPTenantID doesn't work within WinPe
 $AppID = [Environment]::GetEnvironmentVariable('OSDCloudAPAppID','Machine')
